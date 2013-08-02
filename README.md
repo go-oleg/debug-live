@@ -2,6 +2,9 @@ Debug Live
 =====================
 
 This little tool lets you debug your running node.js applications without setting breakpoints!
+* Get and set variable values
+* Run any JavaScript you want
+* No need to interrupt the application with breakpoints 
 
 
 ### Installation
@@ -35,7 +38,7 @@ var a = {
 };
 ```
 
-Start your app, telnet to Debug Live, and look at that all those variables!
+Start your app, telnet to Debug Live, and look at all those variables!
 ```bash
 $ telnet localhost 1337
 Trying 127.0.0.1...
