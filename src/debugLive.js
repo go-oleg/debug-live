@@ -6,7 +6,7 @@ module.exports = function(evalFunc,port) {
 	}
 
 	var server = net.createServer(function (socket) {
-		socket.write("Welcome to the Live Debugger:\n>");
+		socket.write("Welcome to Debug Live:\n>");
 
 		socket.on("data", function(data) {
 			var result = "";
