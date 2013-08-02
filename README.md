@@ -67,3 +67,6 @@ TypeError: Cannot read property 'a' of undefined
 }
 >
 ```
+
+### Inspiration
+The inspiration for Debug Live came from this [Stack Overflow question](http://stackoverflow.com/q/17974935/2359560).
