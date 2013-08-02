@@ -1,7 +1,9 @@
 var net = require('net');
 
 module.exports = function(evalFunc,port) {
-	port = port || 1337;
+	if(!port) {
+		throw new Error("Please specify the `port` as the second parameter to Debug Live.");
+	}
 
 	var server = net.createServer(function (socket) {
 		socket.write("Welcome to the Live Debugger:\n>");
@@ -22,4 +24,5 @@ module.exports = function(evalFunc,port) {
 	});
 
 	server.listen(port, '127.0.0.1');
+	console.log("Debug Live is running on port " + port + ". `telnet localhost " + port + "` to connect.");
 }

@@ -17,9 +17,10 @@ npm install debug-live
 var debugLive = require("debug-live");
 
 //paste in this snippet of code
+//(the second parameter is the configurable port Debug Live should run on)
 debugLive(function (exprToEval) {
   return eval(exprToEval);
-});
+},1337);
 
 //let your app do what it needs to do
 var counter = 0;
@@ -34,7 +35,7 @@ var a = {
 };
 ```
 
-Start your app, telnet to Debug Live, and look at that `counter` go!
+Start your app, telnet to Debug Live, and look at that all those variables!
 ```bash
 $ telnet localhost 1337
 Trying 127.0.0.1...
@@ -65,14 +66,4 @@ TypeError: Cannot read property 'a' of undefined
 	"b": "def"
 }
 >
-```
-
-### Other
-
-You can optionally pass the `port` (default 1337) for Debug Live as a second parameter:
-
-```javascript
-debugLive(function (exprToEval) {
-  return eval(exprToEval);
-},6006);
 ```

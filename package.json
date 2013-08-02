@@ -1,7 +1,7 @@
 {
 	"name": "debug-live",
 	"description": "Debug a running node.js app without breakpoints!",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"keywords": [ "debug" ],
 	"devDependencies": {
 	},
